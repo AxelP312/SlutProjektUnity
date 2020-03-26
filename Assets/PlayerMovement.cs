@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float speed = 3;
+    public Rigidbody2D kroppen;
+    bool ÄrPåmarken;
 
     // Start is called before the first frame update
     void Start()
@@ -16,22 +18,34 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         float controlX = Input.GetAxisRaw("Horizontal");
-        float controlY = Input.GetAxisRaw("Vertical");
-
-        Debug.Log(controlX);
-        Debug.Log(controlY);
-
         Vector3 movementX = Vector3.right * Time.deltaTime * speed * controlX;
-        
-
         transform.Translate(movementX);
 
-        if (Input.GetButtonDown("Jump"))
+
+
+
+
+        kroppen = transform.GetComponent<Rigidbody2D>();
+        if (Input.GetKeyDown(KeyCode.UpArrow) && ÄrPåmarken != true)
         {
-            Vector3 movementY = Vector3.up * Time.deltaTime * speed * controlY;
-            transform.Translate(movementY);
+            ÄrPåmarken = true;
+            Debug.Log("AHH");
+            float test = 5f;
+            kroppen.velocity = Vector3.up * test;
+            //Debug.Log(kroppen.velocity);
         }
-        
+
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "marken")
+        {
+            ÄrPåmarken = false;
+        }
+        Debug.Log("Enter");
     }
 }
