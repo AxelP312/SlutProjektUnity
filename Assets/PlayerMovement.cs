@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         kroppen = transform.GetComponent<Rigidbody2D>();
-        if (Input.GetKeyDown(KeyCode.UpArrow) && ÄrPåmarken != true)
+        if (Input.GetKeyDown(KeyCode.Space) && ÄrPåmarken != true)
         {
             ÄrPåmarken = true;
             Debug.Log("AHH");

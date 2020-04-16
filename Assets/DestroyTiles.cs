@@ -5,18 +5,22 @@ using UnityEngine.Tilemaps;
 
 public class DestroyTiles : MonoBehaviour
 {
-
+    private float BlockDelay = 0;
     Tilemap Block;
-    // Start is called before the first frame update
+    private HotbarKeys hotbarKeys;
+
+
     void Start()
     {
         Block = GameObject.Find("Karta").GetComponent<Tilemap>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButton(0))
+        BlockDelay += Time.deltaTime;
+        hotbarKeys = GetComponent<HotbarKeys>();
+
+        if (Input.GetMouseButton(0) && BlockDelay > 0.5 && hotbarKeys.HotbarSlot == 1)
         {
             Vector3 SnällaFungera = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Debug.Log(SnällaFungera);
@@ -25,6 +29,7 @@ public class DestroyTiles : MonoBehaviour
             Debug.Log(SnällaFungera);
 
             Block.SetTile(TilePos, null);
+            BlockDelay = 0;
         }
     }
 }
