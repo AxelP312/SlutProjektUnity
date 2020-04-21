@@ -7,8 +7,9 @@ public class CreateTiles : MonoBehaviour
 {
     Tilemap Block;
     public Tile[] Tiles;
-    public int Wah = 1;
     private HotbarKeys hotbarKeys;
+    public Item item;
+    public Inventory inventory;
 
     void Start()
     {
@@ -29,33 +30,12 @@ public class CreateTiles : MonoBehaviour
             {}
             else
             {
-                Block.SetTile(TilePos, Test(hotbarKeys.HotbarSlot));
+                if (inventory.ItemList[hotbarKeys.HotbarSlot - 1] != null)
+                {
+                    Block.SetTile(TilePos, inventory.ItemList[hotbarKeys.HotbarSlot - 1].tileName);
+                }
             }
             
-        }
-    }
-
-    Tile Test(int Wah)
-    {
-        if(Wah == 1)
-        {
-            return Tiles[0];
-        }
-        else if(Wah == 2)
-        {
-            return Tiles[1];
-        }
-        else if (Wah == 3)
-        {
-            return Tiles[2];
-        }
-        else if (Wah == 4)
-        {
-            return Tiles[3];
-        }
-        else
-        {
-            return null;
         }
     }
 }

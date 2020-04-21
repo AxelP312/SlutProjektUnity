@@ -28,6 +28,7 @@ public class DestroyTiles : MonoBehaviour
             Vector3Int TilePos = Block.WorldToCell(SnällaFungera);
             Debug.Log(SnällaFungera);
 
+            Debug.Log(Block.GetTile(TilePos));
             Block.SetTile(TilePos, null);
             BlockDelay = 0;
         }

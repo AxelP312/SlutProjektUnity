@@ -9,13 +9,11 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D kroppen;
     bool ÄrPåmarken;
 
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -24,10 +22,8 @@ public class PlayerMovement : MonoBehaviour
         transform.Translate(movementX);
 
 
-
-
-
         kroppen = transform.GetComponent<Rigidbody2D>();
+
         if (Input.GetKeyDown(KeyCode.Space) && ÄrPåmarken != true)
         {
             ÄrPåmarken = true;
@@ -36,6 +32,19 @@ public class PlayerMovement : MonoBehaviour
             kroppen.velocity = Vector3.up * test;
             //Debug.Log(kroppen.velocity);
         }
+
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = 4.5f;
+            Debug.Log(speed);
+        }
+        else if(Input.GetKey(KeyCode.LeftControl))
+        {
+            speed = 1.5f;
+            Debug.Log(speed);
+        }
+        else { speed = 3f; };
 
 
     }

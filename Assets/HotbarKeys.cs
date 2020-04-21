@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HotbarKeys : MonoBehaviour
 {
 
     public int HotbarSlot;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,31 @@ public class HotbarKeys : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             HotbarSlot = 4;
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            HotbarSlot = 5;
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            HotbarSlot = 6;
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            HotbarSlot = 7;
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            HotbarSlot = 8;
+
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            HotbarSlot = 9;
 
         }
         else
