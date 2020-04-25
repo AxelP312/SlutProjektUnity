@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b372b82c6c00ea4bbfe1b751a0a18ad, type: 3}
-  m_Name: Grass
+  m_Name: pickaxeStasis
   m_EditorClassIdentifier: 
-  blockName: Grass
-  tileName: {fileID: 11400000, guid: e0caed79095dd6a4b82f10734b492784, type: 2}
-  sprite: {fileID: 21300000, guid: 4e182c6874dcd07439d8e623375d3ff0, type: 3}
+  blockName: Pickaxe
+  tileName: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 1e83891025a100e48b2921a7e19a2b6d, type: 3}

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b372b82c6c00ea4bbfe1b751a0a18ad, type: 3}
   m_Name: Dirt
   m_EditorClassIdentifier: 
-  blockName: 
-  tileName: {fileID: 0}
-  sprite: {fileID: 0}
+  blockName: Dirt
+  tileName: {fileID: 11400000, guid: 2c634005c85ebe844bcc5777815ed238, type: 2}
+  sprite: {fileID: 21300000, guid: 33888180373cf564aa7caa6c9c615d46, type: 3}

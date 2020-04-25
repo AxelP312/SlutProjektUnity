@@ -5,7 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - marken
-  - button1
+  - slot
   layers:
   - Default
   - TransparentFX

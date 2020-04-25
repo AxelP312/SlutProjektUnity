@@ -8,18 +8,16 @@ public class HotbarKeys : MonoBehaviour
 
     public int HotbarSlot;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        HotbarSlot = 1;
-    }
+    void Start(){HotbarSlot = 1;}
 
-    // Update is called once per frame
     void Update()
     {
         HotbarSlot = TileDecider(HotbarSlot);
     }
 
+    /*Metod som kollar tar in Vilken slot som används, kollar sedan vilken knapp som trycks ner.
+     Om nummer 1 blir ner tryckt blir HotbarSlot 1, vilket i slutet blir return:ad och sätter HotbarSlot till den knapp man klickade.
+    */
     int TileDecider(int HotbarSlot)
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))

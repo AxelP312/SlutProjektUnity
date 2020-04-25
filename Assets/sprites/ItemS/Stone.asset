@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b372b82c6c00ea4bbfe1b751a0a18ad, type: 3}
   m_Name: Stone
   m_EditorClassIdentifier: 
-  blockName: 
-  tileName: {fileID: 0}
-  sprite: {fileID: 0}
+  blockName: Stone
+  tileName: {fileID: 11400000, guid: dba4178a589007e46aac1c2b270736cf, type: 2}
+  sprite: {fileID: 21300000, guid: 443a2257614a6894d9fff9670b9ccd9a, type: 3}
